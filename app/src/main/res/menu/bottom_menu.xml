@@ -10,7 +10,7 @@
         android:title="HOME"
         app:showAsAction="always" />
     <item
-        android:id="@+id/list"
+        android:id="@+id/reserve"
         android:enabled="true"
         android:icon="@drawable/list"
         android:title="Reserve"
