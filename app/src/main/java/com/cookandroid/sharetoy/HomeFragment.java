@@ -2,30 +2,14 @@ package com.cookandroid.sharetoy;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.fragment.app.ListFragment;
-
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
-
-    private BottomNavigationView bottomNavigationView;
-    private FragmentManager manager;
-    private FragmentTransaction transaction;
-    private HomeFragment fragment1;
-    private ListFragment fragment2;
-    private LikeFragment fragment3;
-    private ProfileFragment fragment4;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -126,60 +110,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        bottomNavigationView = v.findViewById(R.id.nav_view);
-        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
 
-                    case R.id.home:
-                        setFrag(0);
-                        break;
-                    case R.id.list:
-                        setFrag(1);
-                        break;
-                    case R.id.like:
-                        setFrag(2);
-                        break;
-                    case R.id.profile:
-                        setFrag(3);
-                        break;
-                }
-                return true;
-            }
-        });
+        return inflater.inflate(R.layout.fragment_home, container, false);
 
-        fragment1 = new HomeFragment();
-        fragment2 = new ListFragment();
-        fragment3 = new LikeFragment();
-        fragment4 = new ProfileFragment();
-
-        setFrag(0); // 첫화면 설정
-        return v;
     }
 
 
-    private void setFrag(int n) {
-        manager = getFragmentManager();
-        transaction = manager.beginTransaction();
-
-        switch (n) {
-            case 0:
-                transaction.replace(R.id.frameLayout, fragment1);
-                transaction.commit();
-                break;
-            case 1:
-                transaction.replace(R.id.frameLayout, fragment2);
-                transaction.commit();
-                break;
-            case 2:
-                transaction.replace(R.id.frameLayout, fragment3);
-                transaction.commit();
-                break;
-            case 3:
-                transaction.replace(R.id.frameLayout, fragment4);
-                transaction.commit();
-                break;
-        }
-    }
 }
