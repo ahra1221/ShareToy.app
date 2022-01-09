@@ -20,7 +20,6 @@ public class SignUpActivity extends AppCompatActivity {
 
                 "user.db", null, 1);
 
-        final TextView result = (TextView) findViewById(R.id.result);
         final EditText etName = (EditText) findViewById(R.id.name);
         final EditText etAddress = (EditText) findViewById(R.id.address);
         final EditText etPhone = (EditText) findViewById(R.id.phone);
