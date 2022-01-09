@@ -30,7 +30,8 @@ public class HomeFragment extends Fragment {
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                System.out.println("버튼 눌림");
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","swing");
                 startActivity(intent);
             }
@@ -39,7 +40,7 @@ public class HomeFragment extends Fragment {
         btn2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","frandimal");
                 startActivity(intent);
             }
@@ -48,7 +49,7 @@ public class HomeFragment extends Fragment {
         btn3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","cocomong");
                 startActivity(intent);
             }
@@ -56,7 +57,7 @@ public class HomeFragment extends Fragment {
         btn4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","redcar");
                 startActivity(intent);
             }
@@ -64,7 +65,7 @@ public class HomeFragment extends Fragment {
         btn5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","racing_car");
                 startActivity(intent);
             }
@@ -72,7 +73,7 @@ public class HomeFragment extends Fragment {
         btn6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","camera");
                 startActivity(intent);
             }
@@ -80,7 +81,7 @@ public class HomeFragment extends Fragment {
         btn7.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","jazz");
                 startActivity(intent);
             }
@@ -88,7 +89,7 @@ public class HomeFragment extends Fragment {
         btn8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","basketball");
                 startActivity(intent);
             }
@@ -96,7 +97,7 @@ public class HomeFragment extends Fragment {
         btn9.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","cut_fruit");
                 startActivity(intent);
             }
@@ -104,16 +105,15 @@ public class HomeFragment extends Fragment {
         btn10.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getActivity().getApplicationContext(), SubInformation.class);
+                Intent intent = new Intent(getActivity(), SubInformation.class);
                 intent.putExtra("ibid","turtle");
                 startActivity(intent);
             }
         });
 
 
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return v;
 
     }
-
 
 }
